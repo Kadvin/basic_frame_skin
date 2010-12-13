@@ -1,7 +1,21 @@
 <div id="main">
-  <%=render_view_component(left) if current_view_component.has?(:left)%>
-  <%=render_view_component(top) if current_view_component.has?(:top)%>
-  <%=yield%>
-  <%=render_view_component(right) if current_view_component.has?(:right)%>
-  <%=render_view_component(bottom) if current_view_component.has?(:bottom)%>
+  <div id="left"> 
+    <%=render_view_component(left) if current_view_component.has?(:left)%>
+  </div>
+  <div id="center">
+    <div id="top">
+      <%=render_view_component(top) if current_view_component.has?(:top)%>
+    </div>
+    <div id="content">
+      <div id="yield">
+      <%=yield%>
+      </div>
+      <div id="right">
+        <%=render_view_component(right) if current_view_component.has?(:right)%>
+      </div>
+    </div>
+    <div id="bottom">
+      <%=render_view_component(bottom) if current_view_component.has?(:bottom)%>
+    </div>
+  </div>
 </div>

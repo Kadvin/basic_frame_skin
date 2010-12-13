@@ -8,13 +8,13 @@ Structure of the Basic Skin
   ----------------------------------|
   | Left   |  Middle      |   Right | header
   |------|--------------------------|
-  |      |  Top Side        |       |
-  | Left |------------------| Right |
-  | Side |                  | Side  |
-  |      |  Main            |       | main
+  |      |  Top Side                |
+  | Left |--------------------------|
+  | Side |                  | Right |
+  |      |  yield           | Side  | main
   |      |                  |       |
-  |      |------------------|       |
-  |      |  Bottom Side     |       |
+  |      |--------------------------|
+  |      |  Bottom Side             |
   |------|--------------------------|
   |            Row1                 | footer
   |            Row2                 | 
