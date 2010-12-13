@@ -1,0 +1,4 @@
+<%- menu = MenuLoader.link_groups[menu] || context.current_menu%>
+<p class="menu_bar">
+  <%=raw(menu.map{ |link| link.to_s}.join("&nbsp;|&nbsp;"))%>
+</p>

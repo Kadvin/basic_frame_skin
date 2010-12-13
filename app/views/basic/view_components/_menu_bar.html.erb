@@ -1,0 +1,13 @@
+<div id="navigation">
+<%- menu = MenuLoader.link_groups[menu] || context.current_menu%>
+  <ul class="menu_bar">
+  <%-
+  menu.each_with_index do |link, index|
+  css_names = [link.name]
+  css_names << "active" if context.selected_link?(link)
+  css_names += ["last"] if( index == menu.links.size - 1 )
+  %>
+    <li class="menu_item"><%=raw(link.to_s(:class=>css_names * ' ', :label => "<span>#{link.label}</span>"))%></li>
+  <%- end%>
+  </ul>
+</div>

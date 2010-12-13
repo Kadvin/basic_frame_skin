@@ -1,0 +1,25 @@
+Basic Skin
+========
+
+Basic Skin for App Frame
+
+Structure of the Basic Skin
+=======
+  ----------------------------------|
+  | Left   |  Middle      |   Right | header
+  |------|--------------------------|
+  |      |  Top Side        |       |
+  | Left |------------------| Right |
+  | Side |                  | Side  |
+  |      |  Main            |       | main
+  |      |                  |       |
+  |      |------------------|       |
+  |      |  Bottom Side     |       |
+  |------|--------------------------|
+  |            Row1                 | footer
+  |            Row2                 | 
+  ----------------------------------|
+
+
+
+Copyright (c) 2010 [Kadvin]

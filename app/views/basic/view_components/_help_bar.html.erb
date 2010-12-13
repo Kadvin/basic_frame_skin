@@ -1,0 +1,12 @@
+<% # the Partial accept: group => Link Group's name%>
+<%link_group = MenuLoader.link_groups[help]%>
+<div id="help_bar_<%=link_group.name%>">
+  <div class="helpbar_header"><h2><%=link_group.label%></h2></div>
+  <div class="helpbar_body">
+    <ul>
+      <%link_group.each do |link|%>
+      <li><%=raw(link)%></li>
+      <%end%>
+    </ul>
+  </div>
+</div>

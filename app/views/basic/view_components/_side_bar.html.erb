@@ -1,0 +1,20 @@
+<%# This partial need: side_bar => Side Bar Name%>
+<%puts "side_bar = #{side_bar}"%>
+<%sidebar = MenuLoader.side_bars[side_bar] || context.current_side_bar%>
+<%puts "find #{sidebar} by name: #{side_bar}"%>
+<div id="sidebar_<%=sidebar.name%>">
+<%sidebar.each{|group|%>
+  <div class="sidebar_header <%=group.css%> <%='selected' if context.selected_group?(group)%>">
+    <h2><%=group.label%></h2>
+  </div>
+  <div class="sidebar_body <%='selected' if context.selected_group?(group)%>">
+    <div class="sidebar_palette">
+      <%group.each{|link|%>
+      <div class="sidebar_item <%='selected' if context.selected_link?(link)%>">
+        <%=raw(link)%>
+      </div>
+      <%}#end group link%>
+    </div>
+  </div>
+  <%}#end side bar %>
+</div>

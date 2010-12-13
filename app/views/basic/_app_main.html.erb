@@ -1,0 +1,7 @@
+<div id="main">
+  <%=render_view_component(left) if current_view_component.has?(:left)%>
+  <%=render_view_component(top) if current_view_component.has?(:top)%>
+  <%=yield%>
+  <%=render_view_component(right) if current_view_component.has?(:right)%>
+  <%=render_view_component(bottom) if current_view_component.has?(:bottom)%>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%
+  title = yield(:title)
+  title = context.label if title.blank?
+%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= title%> | <%="Application Title"%></title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <%=javascript_include_tag :all %>
+  <%=stylesheet_link_tag "frame"%>
+  <%=stylesheet_link_tag context.skin%>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <%=yield(:head)%>
+  <%=javascript_tag @content_for_page_scripts if @content_for_page_scripts %>
+  <%=content_tag(:style, @content_for_page_css, :type=>"text/css" ) if @content_for_page_css %>
+</head>
+<body class="<%=skin%>">
+<div id="page" class="shell">
+  <%=render_view_component(context.structure)%>
+  <br />
+</div>
+<div id="ajaxIndicator" style="display:none">
+  正在加载...
+</div>
+</body>
+</html>
+
