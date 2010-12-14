@@ -1,11 +1,7 @@
-  <!-- Logo + Search + Navigation -->
 <div id="header">
-  <div id="top">
-    <div class="cl">&nbsp;</div>
-    <%=render_view_component(left) if current_view_component.has?(:left)%>
-    <div class="cl">&nbsp;</div>
-    <%=render_view_component(right) if current_view_component.has?(:right)%>
-    <%=render_view_component(center) if current_view_component.has?(:center)%>
-  </div>
-  <!-- END Logo + Search + Navigation -->
+  <div class="cl">&nbsp;</div>
+  <%=render_view_component(left) if current_view_component.has?(:left)%>
+  <%=render_view_component(right) if current_view_component.has?(:right)%>
+  <div class="cl">&nbsp;</div>
+  <%=render_view_component(center) if current_view_component.has?(:center)%>
 </div>

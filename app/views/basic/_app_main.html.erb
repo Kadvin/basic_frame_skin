@@ -1,21 +1,27 @@
-<div id="main">
-  <div id="left"> 
+<%#TODO Thinkof support produce graceful view code when the component absense
+  #It's duty of skin(views) not app_frame's duty!
+%>
+<div id="main" class="cols two-cols">
+  <div class="cl">&nbsp;</div> 
+  <div id="main-left" class="col narrow">
     <%=render_view_component(left) if current_view_component.has?(:left)%>
   </div>
-  <div id="center">
-    <div id="top">
+  <div id="center" class="col wide col-last">
+    <div id="main-top">
       <%=render_view_component(top) if current_view_component.has?(:top)%>
     </div>
-    <div id="content">
-      <div id="yield">
+    <div id="main-body" class="cols two-inner-cols">
+      <div id="yield" class="col wide">
       <%=yield%>
       </div>
-      <div id="right">
+      <div id="main-right" class="col narrow col-last">
         <%=render_view_component(right) if current_view_component.has?(:right)%>
       </div>
     </div>
-    <div id="bottom">
+    <div class="cl">&nbsp;</div>
+    <div id="main-bottom">
       <%=render_view_component(bottom) if current_view_component.has?(:bottom)%>
     </div>
   </div>
+  <div class="cl">&nbsp;</div> 
 </div>

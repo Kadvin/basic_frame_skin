@@ -38,8 +38,10 @@ module BasicSkin
       page.footer.row1   = 'app_about_us'
       page.footer.row2   = :simple_menu_bar
       # init body, default body accept five parts: left, right, top, bottom, main
-      #page.main.top      = 'app_slider'
+      page.main.top      = :placeholder
       page.main.left     = :side_bar
+      page.main.right    = :placeholder
+      page.main.bottom   = :placeholder
       page
     end
     @prototype.dup
