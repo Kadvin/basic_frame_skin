@@ -17,7 +17,7 @@
 #        |            Row2                 |
 #        ----------------------------------|
 #
-module BasicSkin
+module BasicFrameSkin
   #
   # == Create Default Structure for the this skin
   #
